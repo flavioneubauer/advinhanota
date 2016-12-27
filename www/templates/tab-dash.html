@@ -1,0 +1,62 @@
+<ion-content class="padding" style="padding-top: 50px">
+    <div ng-show="playing">
+
+        <br>
+        <h1 class="nota_resultado_container">
+            <strong>
+                {{nota}} {{intervalo >= 0? '+' + intervalo:intervalo}} = {{notaResultado}}
+                <i ng-show="notaResultado != '?'" class="icon ion-checkmark-round balanced"></i>
+            </strong>
+        </h1>
+        <br>
+        <div class="row">
+            <div class="col" ng-repeat="nota in getNotas()| limitTo : 2">
+                <div ng-click="escolher($index)" class="button button-block button-positive button-outline">{{nota}}</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" ng-repeat="nota in getNotas().slice(2,5)">
+                <div ng-click="escolher($index+2)" class="button button-block button-positive button-outline">{{nota}}</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" ng-repeat="nota in getNotas().slice(5)">
+                <div ng-click="escolher($index + 5)" class="button button-block button-positive button-outline col">{{nota}}</div>
+            </div>
+        </div>
+
+        <div style="margin: 0 auto; width: 25%">
+            <div class="row padding" ng-class="{'assertive' : timer/totalTimer >= 0.5, 'balanced' : timer/totalTimer < 0.5}">
+                <i class="icon ion-clock" style="font-size: 80px;">
+                    <label style="margin: 0 40%;">{{totalTimer- timer}}s</label>
+                </i>
+            </div>
+        </div>
+
+    </div>
+    <div class="row" ng-show="!playing">
+        <div class="col col-center">
+            <p>Teste seu conhecimento na sequência de notas.</p>
+            <br>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Tempo máximo (segundos)</span>
+                <input type="number" placeholder="Tempo máximo" ng-model="totalTimer">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Intervalo mínimo</span>
+                <input type="number" placeholder="Tempo máximo" ng-model="minInterval">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Intervalo maximo</span>
+                <input type="number" placeholder="Tempo máximo" ng-model="maxInterval">
+            </label>
+            <br>
+            <button class="button button-full button-balanced" ng-hide="playing" ng-click="play(totalTimer, minInterval, maxInterval)">Começar</button>
+        </div>
+    </div>
+</ion-content>
+<div class="bar bar-footer bar-energized" ng-show="playing">
+    <div class="title" ng-click="pause()">Pausar</button>
+</div>
