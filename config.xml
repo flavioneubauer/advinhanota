@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.advinhanota100460" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>advinhanota</name>
+<widget id="com.techbauer.qual.nota" versionCode="1" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Qual a Nota?</name>
   <description>
-        An Ionic Framework and Cordova project.
+        Projeto para testar as sequencias de notas.
     </description>
-  <author email="you@example.com" href="http://example.com/">
-      Your Name Here
+  <author email="flavioanb@gmail.com" href="http://example.com/">
+      Flavio Neubauer
     </author>
   <content src="index.html"/>
   <access origin="*"/>
@@ -40,4 +40,5 @@
     <splash src="resources/android/splash/drawable-port-xxhdpi-screen.png" density="port-xxhdpi"/>
     <splash src="resources/android/splash/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
   </platform>
+  <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
 </widget>

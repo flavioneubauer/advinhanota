@@ -2,14 +2,6 @@
 
 .nota_resultado_container {text-align: center; color: #fffff0; text-transform: uppercase; border: 2px solid transparent; border-radius: 5px; margin: auto 10px; padding: 26px; background-color: rgb(123, 104, 238);}
 
-.clock {margin: 0 auto; width: 25%}
-.clock i.ion-clock {font-size : 80px}
-.clock i label{margin: 0 40%}
-
-@media only screen
-and (device-width : 320px)
-and (orientation : portrait) {
-    .clock {margin: 0 auto; width: 15%}
-    .clock i.ion-clock {font-size : 40px}
-    .clock i label{margin: 0 20%}
-}
+.clock {margin: -15px auto; width: 15%}
+.clock i.ion-clock {font-size : 50px}
+.clock i label{margin: 0 35%}
